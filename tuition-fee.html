@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCAHPT Payment Portal</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="dist/nav.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div
+            class="flex fixed lg:relative top-0 w-full z-[9999] bg-white h-[116px] lg:h-[200px] py-4 lg:py-10 border-primary border-b-[3px] lg:border-b-0">
+            <div class="mx-6 lg:mx-14 py-auto">
+                <img src="logo.svg" alt="FCAHPT" class="hidden lg:flex h-full w-auto">
+                <img src="logo.svg" alt="FCAHPT" class="flex lg:hidden w-[125px] h-auto">
+            </div>
+            <div class="flex justify-between items-center w-full my-auto">
+                <div class="flex md:hidden">
+                    <h1 class="text-primary font-semibold text-[28px]">FCAHPT</h1>
+                </div>
+                <div class="hidden md:flex">
+                    <h1 class="font-medium text-[28px] lg:text-[32px] w-full md:max-w-[27ch] lg:max-w-[541px]">Federal
+                        College of Animal Health
+                        and Production Technology, Ibadan.</h1>
+                </div>
+                <div class="hamburger flex lg:hidden mr-6"><img src="hamburger.svg" alt="Hamburger"></div>
+            </div>
+        </div>
+        <nav class="hidden lg:flex justify-center h-[66px] bg-primary items-center">
+            <ul class="flex justify-evenly">
+                <li><a href="index.html" class="text-white mr-24">Home</a></li>
+                <li><a href="#" class="text-white mr-24">Tuition Fee</a></li>
+                <li><a href="#" class="text-white mr-24">Departmental Fee</a></li>
+                <li><a href="#" class="text-white mr-24">Medical Fee</a></li>
+                <li><a href="#" class="text-white mr-24">SUG Fee</a></li>
+                <li><a href="#" class="text-white">State Fee</a></li>
+            </ul>
+        </nav>
+        <nav class="h-fit bg-primary items-center">
+            <ul class="nav-links">
+                <li><a href="index.html" class="text-white ">Home</a></li>
+                <li><a href="#" class="text-white">Tuition Fee</a></li>
+                <li><a href="#" class="text-white ">Departmental Fee</a></li>
+                <li><a href="#" class="text-white ">Medical Fee</a></li>
+                <li><a href="#" class="text-white ">SUG Fee</a></li>
+                <li><a href="#" class="text-white">State Fee</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bg-[#E5E5E5] min-h-[calc(100vh_-_116px)] lg:min-h-[calc(100vh_-_266px)]">
+        <div class="flex flex-col justify-center items-center">
+            <form action="process.php" id="paymentForm" method="post" class="w-full max-w-[654px] bg-white p-4 md:p-20  mt-[180px] mb-14 lg:my-[100px]">
+                <h1 class="font-medium text-[32px] text-[#333] mb-4">Pay Tuition Fee</h1>
+                <div class="form-group">
+                    <input class="placeholder:text-[#828282] py-2 px-4 md:px-8 border-2 border-[#BDBDBD] w-full max-w-[558px]" type="email" id="email-address" name='email' required placeholder="Email Address" />
+                </div>
+                <div class="form-group">
+                    <input class="placeholder:text-[#828282] py-2 px-4 md:px-8 border-2 border-[#BDBDBD] w-full max-w-[558px]" type="text" name='name' id="fname" placeholder="Full Name"/>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="placeholder:text-[#828282] py-2 px-4 md:px-8 border-2 border-[#BDBDBD] w-full max-w-[558px]">
+                        <option value="" class="text-[#828282]">Level</option>
+                        <option value="Computer">ND1</option>
+                        <option value="1000">ND2</option>
+                        <option value="1000">HND1</option>
+                        <option value="1000">HND2</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select name="" id="amount" class="placeholder:text-[#828282] py-2 px-4 md:px-8 border-2 border-[#BDBDBD] w-full max-w-[558px]">
+                        <!-- computer department -->
+                        <option value="" class="text-[#828282]">Department</option>
+                        <option value="1500">Computer ND1 - #1500</option>
+                        <option value="1000">Computer ND2 -#1000</option>
+                        <option value="1000">Computer HND1 -#1000</option>
+                        <option value="1000">Computer HND2 -#1000</option>
+                        <!-- computer department -->
+
+                        <!-- slt deparment -->
+                        <option value="1000">Science Laboratory Technology ND1</option>
+                        <option value="1000">Science Laboratory Technology ND2</option>
+                        <!-- slt deparment -->
+                        <!-- vlt deparment -->
+                        <option value="1000">Vertinary LAboratory Technology ND1</option>
+                        <option value="1000">Vertinary LAboratory Technology ND2</option>
+                        <!-- vlt deparment -->
+
+                        <!-- ahm -->
+                        <option value="1000">Animal Health ND1</option>
+                        <option value="1000">Animal Health ND2</option>
+                        <!-- ahm -->
+
+                        <option value="1000">Statistic ND1</option>
+                        <option value="1000">Statistic ND2</option>
+                    </select>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name='btn' class="font-semibold text-2xl py-1 px-4 md:px-8 w-fit bg-transparent text-primary border-[#D11F1B] border-2">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="nav.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"> </script>
+
+    <script>
+        const paymentForm = document.getElementById('paymentForm');
+        paymentForm.addEventListener("submit", payWithPaystack, false);
+        function payWithPaystack(e) {
+            e.preventDefault();
+
+            let handler = PaystackPop.setup({
+                key: 'pk_test_5dea9fa9ca95a7a40750b76c97e0b2e7bbb924eb', // Replace with your public key
+                email: document.getElementById("email-address").value,
+                amount: document.getElementById("amount").value * 100,
+                ref: '' + Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                // label: "Optional string that replaces customer email"
+                onClose: function () {
+                    alert('Window closed.');
+                },
+                callback: function (response) {
+                    let message = 'Payment complete! With the reference no: ' + response.reference;
+                    alert(message);
+                }
+            });
+
+            handler.openIframe();
+
+        }
+    </script>
+</body>
+
+</html>

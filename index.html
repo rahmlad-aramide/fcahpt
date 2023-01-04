@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCAHPT Payment Portal</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="dist/nav.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="flex fixed lg:relative top-0 w-full z-[9999] bg-white h-[116px] lg:h-[200px] py-4 lg:py-10 border-primary border-b-[3px] lg:border-b-0">
+            <div class="mx-6 lg:mx-14 py-auto">
+                <img src="logo.svg" alt="FCAHPT" class="hidden lg:flex h-full w-auto">
+                <img src="logo.svg" alt="FCAHPT" class="flex lg:hidden w-[125px] h-auto">
+            </div>
+            <div class="flex justify-between items-center w-full my-auto">
+                <div class="flex md:hidden">
+                    <h1 class="text-primary font-semibold text-[28px]">FCAHPT</h1>
+                </div>
+                <div class="hidden md:flex">
+                    <h1 class="font-medium text-[28px] lg:text-[32px] w-full md:max-w-[27ch] lg:max-w-[541px]">Federal College of Animal  Health 
+                        and Production  Technology, Ibadan.</h1>
+                </div>
+                <div class="hamburger flex lg:hidden mr-6"><img src="hamburger.svg" alt="Hamburger"></div>
+            </div>
+        </div>
+        <nav class="hidden lg:flex justify-center h-[66px] bg-primary items-center">
+            <ul class="flex justify-evenly">
+                <li><a href="#" class="text-white mr-24">Home</a></li>
+                <li><a href="tuition-fee.html" class="text-white mr-24">Tuition Fee</a></li>
+                <li><a href="#" class="text-white mr-24">Departmental Fee</a></li>
+                <li><a href="#" class="text-white mr-24">Medical Fee</a></li>
+                <li><a href="#" class="text-white mr-24">SUG Fee</a></li>
+                <li><a href="#" class="text-white">State Fee</a></li>
+            </ul>
+        </nav>
+        <nav class="bg-primary items-center">
+            <ul class="nav-links">
+                <li><a href="#" class="text-white ">Home</a></li>
+                <li><a href="tuition-fee.html" class="text-white">Tuition Fee</a></li>
+                <li><a href="#" class="text-white ">Departmental Fee</a></li>
+                <li><a href="#" class="text-white ">Medical Fee</a></li>
+                <li><a href="#" class="text-white ">SUG Fee</a></li>
+                <li><a href="#" class="text-white">State Fee</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bg-[#E5E5E5] min-h-[calc(100vh_-_116px)] lg:min-h-[calc(100vh_-_266px)]">
+        <!-- Slider main container -->
+        <div class="swiper mt-[116px] lg:mt-0 h-[400px] w-full max-w-[900px]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="https://www.fcahptib.edu.ng/pics/stat.jpg" alt="Statistics">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.fcahptib.edu.ng/pics/slt.jpg" alt="SLT">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.fcahptib.edu.ng/pics/agribusiness.jpg" alt="Agribusiness">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.fcahptib.edu.ng/pics/fish.jpg" alt="Fishery">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.fcahptib.edu.ng/pics/ah1.jpg" alt="Agribusiness">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://www.fcahptib.edu.ng/pics/com.jpg" alt="Computer Lab">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev text-primary"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="flex flex-col items-center px-0 md:px-20">
+            <div class="w-full max-w-[900px] bg-white py-4 px-8 custom-shadow my-14">
+                <h1 class="font-medium text-[32px] text-[#333] mb-4">
+                    About Us
+                </h1>
+                <p class="my-2 text-[#333]">The School of Animal Health and Husbandry (as it was then referred to) was founded on the 1st of April, 1964 (by the defunct Western Region and USAID) to meet the need to train Livestock Assistants (certificate) in order to cope with the ever increasing demand for assistance in the practise of veterinary profession. The School became an integral part of the Institute of Agricultural Research and Training (I.A.R. &T) of the ObafemiAwolowo University, Ile-Ife by the Western State Edict of 1970.</p>
+                <p class="my-2 text-[#333]">The Mission of the College is to contribute to the development of Nigeria through training of qualitative manpower by adequate exposure to sound theoretical background, practical, farm and field demonstration as well as knowledge capacity development for staff.</p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+   <script src="nav.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                768: {
+                slidesPerView: 1,
+                spaceBetween: 30
+                },
+                // when window width is >= 480px
+                1024: {
+                slidesPerView: 2,
+                spaceBetween: 40
+                },
+                // when window width is >= 640px
+                1280: {
+                slidesPerView: 3,
+                spaceBetween: 50
+                }
+            }
+        }); 
+    </script>
+</body>
+</html>
